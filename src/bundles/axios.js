@@ -7,7 +7,7 @@ const apiFetch = axios.create({
 
 apiFetch.interceptors.request.use((config) => {
   const user = getUserFromLocalStorage();
-  if (user) {
+  if (user?.email) {
     config.headers['Authorization'] = `Bearer ${user?.token}`;
   }
   return config;

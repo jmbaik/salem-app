@@ -1,7 +1,13 @@
 import { atom } from 'recoil';
+// import { recoilPersist } from 'recoil-persist';
+import { getUserFromLocalStorage } from '../bundles/localStorage';
+
+// const { persistAtom } = recoilPersist();
 
 export const adminUserState = atom({
   key: 'adminUserState',
+  default: getUserFromLocalStorage(),
+  /*
   default: {
     email: '',
     phone: '',
@@ -15,4 +21,6 @@ export const adminUserState = atom({
     updDate: '',
     token: '',
   },
+  effects_UNSTABLE: [persistAtom],
+  */
 });
