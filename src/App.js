@@ -10,13 +10,16 @@ import SeniorPastorIntro from './pages/intro/SeniorPastorIntro';
 import WorshipPeopleIntro from './pages/intro/WorshipPeopleIntro';
 import Manage from './pages/manage/Manage';
 import News from './pages/news/News';
-import ComeGuide from './pages/guide/ComeGuide';
-import FacilityGuide from './pages/guide/FacilityGuide';
-import FamilyGuide from './pages/guide/FamilyGuide';
-import OfferingGuide from './pages/guide/OfferingGuide';
-import WorshipGuide from './pages/guide/WorshipGuide';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import {
+  GuideContainer,
+  WorshipGuide,
+  ComeGuide,
+  FacilityGuide,
+  FamilyGuide,
+  OfferingGuide,
+} from './pages/guide';
 
 function App() {
   return (
@@ -37,6 +40,7 @@ function App() {
           <Route path="intro-worship-people" element={<WorshipPeopleIntro />} />
           <Route path="manage" element={<Manage />} />
           <Route path="news" element={<News />} />
+          <Route path="guide" element={<GuideContainer />} />
           <Route path="guide-come" element={<ComeGuide />} />
           <Route path="guide-facility" element={<FacilityGuide />} />
           <Route path="guide-family" element={<FamilyGuide />} />

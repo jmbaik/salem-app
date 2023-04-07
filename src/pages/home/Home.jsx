@@ -1,7 +1,12 @@
 import React from 'react';
+import Accordion from '../../made/Accordion';
 
 const Home = () => {
-  return <div>Home</div>;
+  return (
+    <>
+      <Accordion />
+    </>
+  );
 };
 
 export default Home;
